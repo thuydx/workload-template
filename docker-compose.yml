@@ -76,6 +76,8 @@ services:
     working_dir: /usr/src/app
     volumes:
       - ${FRONTEND_PATH}:/usr/src/app
+    ports:
+      - "${FRONTEND_PORT}:${FRONTEND_PORT}"
     expose:
       - "${FRONTEND_PORT}"
     networks:
